@@ -1,0 +1,9 @@
+package com.ejerciciosclase.ejerciciovideoclub;
+
+import java.util.ArrayList;
+
+public class Videoclub {
+
+	private ArrayList<Cliente> listaClientes;
+	
+}

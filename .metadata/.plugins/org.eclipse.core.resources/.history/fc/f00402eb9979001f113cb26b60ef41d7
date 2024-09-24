@@ -1,0 +1,31 @@
+package com.masterjava.ejerciciocafetera;
+
+public class Cafeteria {
+
+	public static void main(String[] args) {
+	
+		Cafetera c1 = new Cafetera();
+		
+		c1.agregarCafe(200);
+		
+		System.out.println(c1);
+		
+		c1.llenarCafetera();
+		
+		System.out.println(c1);
+		
+		c1.agregarCafe(60);
+		
+		System.out.println(c1);
+		
+		c1.servirTaza(1200);
+		
+		System.out.println(c1);
+		
+		c1.agregarCafe(350);
+		
+		System.out.println(c1);
+
+	}
+
+}

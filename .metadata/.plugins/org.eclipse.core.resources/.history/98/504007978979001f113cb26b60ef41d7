@@ -1,0 +1,10 @@
+package com.masterjava.ejerciciocafetera;
+
+public class Cafetera {
+
+	private int capacidadMaxima;
+	private int capacidadActual;
+	
+	
+	
+}

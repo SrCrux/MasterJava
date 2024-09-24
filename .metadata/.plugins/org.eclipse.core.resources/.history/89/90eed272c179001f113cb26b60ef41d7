@@ -1,0 +1,15 @@
+package com.ejerciciosclase.ejerciciovideoclub;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Videoclub v1 = new Videoclub();
+		Pelicula p1 = new Pelicula(1234,"Parasitos");
+		Pelicula p2 = new Pelicula(3212,"Past Lives");
+		Pelicula p3 = new Pelicula(4318,"El viaje de Chihiro");
+		Pelicula p4 = new Pelicula(0312,"American History X");
+
+	}
+
+}

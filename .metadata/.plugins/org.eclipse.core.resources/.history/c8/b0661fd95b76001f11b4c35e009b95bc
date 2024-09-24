@@ -1,0 +1,10 @@
+package ejercicio_liga_futbol;
+
+import java.util.ArrayList;
+
+public class Equipo {
+
+	private String nombre;
+	private ArrayList<Jugador> plantilla;
+
+}

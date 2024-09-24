@@ -1,0 +1,12 @@
+package com.ejerciciosclase.ejerciciovideoclub;
+
+import java.util.Date;
+
+public class Prestamo {
+	
+	private Cliente cliente;
+	private Pelicula pelicula;
+	private Date fechaPrestamo;
+	private Date fechaDevolucion;
+
+}

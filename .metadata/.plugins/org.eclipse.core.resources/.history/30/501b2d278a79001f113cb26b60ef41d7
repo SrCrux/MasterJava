@@ -1,0 +1,33 @@
+package com.masterjava.ejerciciocafetera;
+
+public class Cafetera {
+
+	private int capacidadMaxima;
+	private int capacidadActual;
+	
+	public Cafetera() {
+		super();
+		capacidadMaxima = 1000;
+		capacidadActual = 0;
+	}
+
+	public Cafetera(int capacidadMaxima) {
+		super();
+		this.capacidadMaxima = capacidadMaxima;
+		capacidadActual= capacidadMaxima;
+	}
+
+	public Cafetera(int capacidadMaxima, int capacidadActual) {
+		super();
+		
+		if (capacidadActual>capacidadMaxima) {
+			
+			this.capacidadActual = capacidadMaxima;
+		}
+		this.capacidadMaxima = capacidadMaxima;
+		this.capacidadActual = capacidadActual;
+	}
+	
+	
+	
+}

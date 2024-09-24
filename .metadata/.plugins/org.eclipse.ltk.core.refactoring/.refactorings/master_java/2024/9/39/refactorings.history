@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;master_java/enunciados/enunciado.txt&apos; to &apos;enunciadoTema3.2Rectangulo.txt&apos;" description="Rename resource &apos;enunciado.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="enunciados/enunciado.txt" name="enunciadoTema3.2Rectangulo.txt" stamp="1727090886575" updateReferences="true"/>
+</session>

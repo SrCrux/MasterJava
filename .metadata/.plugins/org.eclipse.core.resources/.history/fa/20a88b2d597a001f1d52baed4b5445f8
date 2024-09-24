@@ -1,0 +1,11 @@
+package com.masterjava.ejerciciocafetera;
+
+public class Cafeteria {
+
+	public static void main(String[] args) {
+
+		Cafetera c1 = new Cafetera();
+
+	}
+
+}

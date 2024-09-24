@@ -1,0 +1,13 @@
+package com.masterjava.ejerciciocuenta;
+
+public class Banco {
+
+	public static void main(String[] args) {
+	
+		Cuenta c1 = new Cuenta("Patricio Estrella",2560.40);
+		
+		c1.ingresarDinero(200);
+
+	}
+
+}

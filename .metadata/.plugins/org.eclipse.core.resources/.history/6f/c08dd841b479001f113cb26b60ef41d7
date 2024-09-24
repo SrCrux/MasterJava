@@ -1,0 +1,25 @@
+package com.ejerciciosclase.ejerciciovideoclub;
+
+import java.util.ArrayList;
+
+public class Videoclub {
+
+	private ArrayList<Cliente> listaClientes;
+	private ArrayList<Prestamo> listaPrestamos;
+	private ArrayList<Pelicula> listaPeliculas;
+
+	public Videoclub() {
+
+		listaClientes = new ArrayList();
+		listaPrestamos = new ArrayList();
+		listaPeliculas = new ArrayList();
+
+	}
+
+	public void añadirCliente(Cliente cliente) {
+
+		listaClientes.add(cliente);
+
+	}
+
+}

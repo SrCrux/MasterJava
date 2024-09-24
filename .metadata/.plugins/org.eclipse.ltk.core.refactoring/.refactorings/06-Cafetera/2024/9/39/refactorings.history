@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;capacidadActual&apos; in &apos;com.masterjava.ejerciciocafetera.Cafetera&apos; to &apos;cantidadActual&apos;&#x0D;&#x0A;- Original project: &apos;06-Cafetera&apos;&#x0D;&#x0A;- Original element: &apos;com.masterjava.ejerciciocafetera.Cafetera.capacidadActual&apos;&#x0D;&#x0A;- Renamed element: &apos;com.masterjava.ejerciciocafetera.Cafetera.cantidadActual&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;capacidadActual&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.masterjava.ejerciciocafetera{Cafetera.java[Cafetera^capacidadActual" name="cantidadActual" references="true" setter="false" stamp="1727081909954" textual="false" version="1.0"/>
+</session>

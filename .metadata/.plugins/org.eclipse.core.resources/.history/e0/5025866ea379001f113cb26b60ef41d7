@@ -1,0 +1,10 @@
+package com.ejerciciosclase.ejerciciorectangulo;
+
+public class MainRectangulo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

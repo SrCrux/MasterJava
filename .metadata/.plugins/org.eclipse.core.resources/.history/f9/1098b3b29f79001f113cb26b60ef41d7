@@ -1,0 +1,29 @@
+package com.ejerciciosclase.ejerciciorectangulo;
+
+public class Rectangulo {
+
+	private int largo;
+	private int ancho;
+
+	public Rectangulo() {
+		this.largo = 6;
+		this.ancho = 4;
+	}
+
+	public Rectangulo(int largo, int ancho) {
+		super();
+
+		if (largo > 0 && ancho > 0) {
+			this.largo = largo;
+			this.ancho = ancho;
+
+		} else {
+
+			this.largo = 6;
+			this.ancho = 4;
+
+		}
+
+	}
+
+}

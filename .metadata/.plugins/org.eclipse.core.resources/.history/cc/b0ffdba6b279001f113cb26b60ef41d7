@@ -1,0 +1,8 @@
+package com.ejerciciosclase.ejerciciovideoclub;
+
+public class Cliente {
+	
+	private int nCarnet;
+	private String nombre;
+
+}

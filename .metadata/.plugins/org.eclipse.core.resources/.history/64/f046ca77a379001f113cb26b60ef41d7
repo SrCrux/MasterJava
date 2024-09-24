@@ -1,0 +1,13 @@
+package com.ejerciciosclase.ejerciciorectangulo;
+
+public class MainRectangulo {
+
+	public static void main(String[] args) {
+	
+		Rectangulo r1 = new Rectangulo (4,10);
+		
+		System.out.println(r1.calcularArea());
+
+	}
+
+}
