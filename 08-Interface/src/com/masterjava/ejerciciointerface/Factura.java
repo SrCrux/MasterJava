@@ -1,0 +1,43 @@
+package com.masterjava.ejerciciointerface;
+
+public class Factura implements Imprimible {
+
+	private int nFactura;
+	private int codigoCliente;
+
+	public Factura(int nFactura, int codigoCliente) {
+
+		this.nFactura = nFactura;
+		this.codigoCliente = codigoCliente;
+	}
+
+	public int getnFactura() {
+		return nFactura;
+	}
+
+	public void setnFactura(int nFactura) {
+		this.nFactura = nFactura;
+	}
+
+	public int getCodigoCliente() {
+		return codigoCliente;
+	}
+
+	public void setCodigoCliente(int codigoCliente) {
+		this.codigoCliente = codigoCliente;
+	}
+
+	@Override
+	public void informeLargo() {
+
+		System.out.println("La factura número " + nFactura + " pertenece al cliente " + codigoCliente);
+
+	}
+
+	@Override
+	public void informeCorto() {
+
+		System.out.println("Soy la factura número " + nFactura);
+	}
+
+}
