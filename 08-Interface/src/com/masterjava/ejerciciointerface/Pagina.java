@@ -1,5 +1,14 @@
 package com.masterjava.ejerciciointerface;
 
+
+/**
+ * Clase que identifica las páginas y líneas de un informe
+ * 
+ * 
+ * @author Pablo Guijarro
+ * @version 1.0 25/09/2024
+ *
+ */
 public class Pagina implements Imprimible {
 
 	private int nPagina;
@@ -26,7 +35,8 @@ public class Pagina implements Imprimible {
 	public void setnLineas(int nLineas) {
 		this.nLineas = nLineas;
 	}
-
+	
+	
 	@Override
 	public void informeLargo() {
 

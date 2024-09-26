@@ -1,6 +1,5 @@
 package com.ejerciciosclase.ejerciciopersona;
 
-import java.util.Random;
 
 public class Persona {
 
@@ -14,6 +13,8 @@ public class Persona {
 	public Persona(String nombre) {
 
 		this.nombre = nombre;
+		DNI = generaDNI();
+		
 	}
 
 	public Persona(String nombre, int edad, char genero) {
@@ -21,15 +22,18 @@ public class Persona {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;
+		DNI = generaDNI();
+		
 	}
 
-	public Persona(String nombre, int edad, char genero, double peso, int altura) {
+	public Persona(String nombre, int edad, char genero, double peso, double altura) {
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;
 		this.peso = peso;
 		this.altura = altura;
+		DNI = generaDNI();
 	}
 
 	public String getNombre() {
@@ -76,19 +80,25 @@ public class Persona {
 		return DNI;
 	}
 
-	public int calcularIMC() {
+	public void setDNI(String DNI) {
+
+		this.DNI = DNI;
+
+	}
+
+	public void calcularIMC() {
 
 		if (peso / (altura * 2) < 20) {
 
-			return -1;
+			System.out.println("Estás mu delga@, hay que subir peso");
 
 		} else if ((peso / (altura * 2) > 20) && (peso / (altura * 2) < 25)) {
 
-			return 0;
+			System.out.println("Estas to buen@");
 
 		} else {
 
-			return 1;
+			System.out.println("Estas reguler@, hay que bajar peso");
 		}
 
 	}
@@ -121,23 +131,31 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Nombre: " + nombre + "\n Edad:" + edad + "\nDNI= " + DNI + "\nGenero= " + comprobarGenero(genero)
+		return "Nombre: " + nombre + "\nEdad:" + edad + "\nDNI= " + DNI + "\nGenero= " + comprobarGenero(genero)
 				+ "\nPeso= " + peso + "Kg\nAltura=" + altura + "m";
 	}
 
-	public String generaDNI() {
-		
-		int numeroDNIRandom = (int) (Math.random()*10000000);
-		
-		
-				
-		
+	private String generaDNI() {
 
-		char[] letraDNI = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
+		int numero;
+		int resto;
+		String cadena = "";
+		char letraDNI;
+
+		char[] letrasDNI = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
 				'H', 'L', 'C', 'K', 'E' };
 
-		if (numeroDNIRandom<=)
-		
+		for (int i = 0; i < 8; i++) {
+
+			numero = (int) (Math.random() * 10);
+			cadena = cadena + numero;
+
+		}
+
+		resto = Integer.parseInt(cadena) % 23;
+		letraDNI = letrasDNI[resto];
+		cadena += letraDNI;
+		return cadena;
 	}
 
 }

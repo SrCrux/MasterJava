@@ -1,5 +1,10 @@
 package com.masterjava.ejercicioorquesta;
-
+/**
+ * Clase que identifica que instrumento va a tocar un músico.
+ * 
+ * @author Pablo Guijarro
+ * @version 1.0
+ */
 public class GuitarraElectrica extends Guitarra {
 
 	protected int potencia;

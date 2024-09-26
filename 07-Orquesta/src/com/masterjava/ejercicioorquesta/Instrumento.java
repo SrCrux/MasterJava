@@ -1,6 +1,11 @@
 package com.masterjava.ejercicioorquesta;
-
-public class Instrumento {
+/**
+ * Clase padre que establece las características comunes de varios instrumentos.
+ *
+ * @author Pablo Guijarro
+ * @version 1.0
+ */
+public abstract class Instrumento {
 
 	protected String nombre;
 	protected String tipo;

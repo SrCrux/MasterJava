@@ -1750,3 +1750,4 @@
 2024-09-24 13:25:27,031 [main] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\Admin\git\Master-Java\.git]
 2024-09-24 13:25:50,978 [Worker-68: Remove Repositories] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\Admin\git\masterjava\.git]
 2024-09-24 13:28:22,597 [Worker-65: Git Repository Change Scanner] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\Admin\git\repository\.git]
+2024-09-25 08:42:39,992 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

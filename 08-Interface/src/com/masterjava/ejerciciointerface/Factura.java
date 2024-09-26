@@ -1,5 +1,13 @@
 package com.masterjava.ejerciciointerface;
 
+/**
+ * Clase que identifica que facturas le corresponden a cada cliente.
+ * 
+ * 
+ * @author Pablo Guijarro
+ * @version 1.0 25/09/2024
+ *
+ */
 public class Factura implements Imprimible {
 
 	private int nFactura;

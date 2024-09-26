@@ -1,5 +1,11 @@
 package com.masterjava.ejercicioorquesta;
-
+/**
+ * 
+ * Clase Musico que representa la figura de un músico que va tocar un instrumento.
+ * 
+ * @author Pablo Guijarro
+ * @version 1.0
+ */
 public class Musico {
 
 	private String nombre;
