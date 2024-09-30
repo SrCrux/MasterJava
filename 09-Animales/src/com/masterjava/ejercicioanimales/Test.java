@@ -11,7 +11,7 @@ public class Test {
 		Animal gato = new Gato("Yonsi");
 		Animal pez = new Pez("Tierra");
 
-		List<Animal> listaAnimales = new ArrayList<Animal>();
+		List<Animal> listaAnimales = new ArrayList<>();
 
 		listaAnimales.add(arania);
 		listaAnimales.add(gato);
@@ -26,6 +26,8 @@ public class Test {
 				((Mascota) listaAnimales.get(i)).jugar();
 
 			}
+
+			System.out.println();
 		}
 
 	}

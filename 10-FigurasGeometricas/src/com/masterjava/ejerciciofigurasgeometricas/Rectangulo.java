@@ -24,7 +24,7 @@ public class Rectangulo extends FiguraGeometrica implements Area {
 
 		int area = ancho * largo;
 
-		System.out.println("El área del rectangulo es : " + area);
+		System.out.println("El área del rectangulo es: " + area);
 
 	}
 }

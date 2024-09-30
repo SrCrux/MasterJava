@@ -21,7 +21,7 @@ public class Circulo implements Area {
 
 		double area = Math.PI * (radio * 2);
 
-		System.out.println("El área del círculo es : " + area);
+		System.out.println("El área del círculo es: " + String.format("%.2f", area));
 
 	}
 }

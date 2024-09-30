@@ -1,7 +1,7 @@
 package com.masterjava.ejercicioanimales;
 
 /**
- * Clase que identifica un animal por su numerod de patas.
+ * Clase que identifica un animal por su número de patas.
  * 
  * @author Pablo Guijarro
  * @version 1.0 26/09/2024
