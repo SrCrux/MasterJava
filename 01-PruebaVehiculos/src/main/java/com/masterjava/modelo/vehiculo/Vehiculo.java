@@ -5,6 +5,8 @@ package com.masterjava.modelo.vehiculo;
 
 import java.time.LocalDateTime;
 
+import com.masterjava.interfaces.conducible.Conducible;
+
 /**
  *
  * Vehiculo Clase que establece los atributos comunes a todos los vehículos
@@ -12,7 +14,7 @@ import java.time.LocalDateTime;
  * @author Pablo Guijarro
  * @version 1.0, 30 sept 2024
  */
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Conducible {
 
 	protected final String MATRICULA;
 	protected String color;

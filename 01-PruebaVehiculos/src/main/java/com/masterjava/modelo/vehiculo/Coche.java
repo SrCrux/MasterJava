@@ -1,7 +1,7 @@
 package com.masterjava.modelo.vehiculo;
 
 import java.time.LocalDateTime;
-import com.masterjava.interfaces.conducible.Conducible;
+
 import com.masterjava.interfaces.conducible.VehiculoRuedas;
 
 /**
@@ -11,7 +11,7 @@ import com.masterjava.interfaces.conducible.VehiculoRuedas;
  * @author Pablo Guijarro
  * @version 1.0, 30 sept 2024
  */
-public class Coche extends Vehiculo implements Conducible, VehiculoRuedas {
+public class Coche extends Vehiculo implements VehiculoRuedas {
 
 	private static final int NUMERO_RUEDAS = 4;
 

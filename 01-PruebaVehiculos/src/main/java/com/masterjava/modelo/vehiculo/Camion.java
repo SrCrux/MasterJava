@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.masterjava.interfaces.conducible.Conducible;
 import com.masterjava.interfaces.conducible.VehiculoRuedas;
 
 /**
@@ -17,7 +16,7 @@ import com.masterjava.interfaces.conducible.VehiculoRuedas;
  * @author Pablo Guijarro
  * @version 1.0, 30 sept 2024
  */
-public class Camion extends Vehiculo implements Conducible, VehiculoRuedas {
+public class Camion extends Vehiculo implements VehiculoRuedas {
 
 	private List<Double> listaVelocidades;
 	private static final int NUMERO_RUEDAS = 10;
