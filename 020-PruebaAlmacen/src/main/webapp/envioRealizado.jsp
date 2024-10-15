@@ -26,7 +26,7 @@ table, th, td {
 	<h3>Envío realizado correctamente.</h3>
 	<%for (Producto p : listaProductos) {
 	if (p.getNombre().equalsIgnoreCase(request.getParameter("nombre"))) {
-		if(unidades>p.getStock()){%>
+		if(p.getStock()==0){%>
 		<h4>La cantidad de producto enviada es mayor al stock, se han enviado todas las unidades de <%=p.getNombre()%>. Ya no quedan más unidades</h4>
 		<%}else {%>
 	<h4>Se han enviado <%=unidades%> unidades del producto <%=p.getNombre()%></h4>

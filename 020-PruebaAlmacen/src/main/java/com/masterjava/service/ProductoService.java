@@ -106,6 +106,12 @@ public class ProductoService {
 
 	}
 
+	/**
+	 * Método que retira un número x de elementos a la variable stock.
+	 * 
+	 * @param nombre
+	 * @param unidades
+	 */
 	public void enviarPedido(String nombre, int unidades) {
 		for (int i = 0; i < listaProductos.size(); i++) {
 
