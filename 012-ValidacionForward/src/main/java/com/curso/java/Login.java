@@ -19,19 +19,19 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	String usuario = request.getParameter("usuario");
-	String pwd = request.getParameter("pwd");
-	
-	if(usuario.equals("admin")&& pwd.equals("admin")) {
-		LocalDate date = LocalDate.now();
-		request.setAttribute("fecha", date);
+		String usuario = request.getParameter("usuario");
+		String pwd = request.getParameter("pwd");
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/Entrada");
-		dispatcher.forward(request, response);
-	}else {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/Error");
-		dispatcher.forward(request, response);
-	}
-	}
+		if(usuario.equals("admin")&& pwd.equals("admin")) {
+			LocalDate date = LocalDate.now();
+			request.setAttribute("fecha", date);
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/Entrada");
+			dispatcher.forward(request, response);
+		}else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/Error");
+			dispatcher.forward(request, response);
+		}
+		}
 
 }

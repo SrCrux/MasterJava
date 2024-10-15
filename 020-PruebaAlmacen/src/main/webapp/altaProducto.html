@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alta de producto</title>
+</head>
+<body>
+	<form action="AltaProductoControlador" method="post">
+		<label for="nombre">Nombre:</label> 
+		<input type="text" id="nombre" name="nombre"><br> 
+		<label for="categoria">Categoria:</label>
+		<select id="categoria" name="categoria">
+			<option value="electronica">Electronica</option>
+			<option value="papeleria">Papeleria</option>
+			<option value="alimentacion">Alimentacion</option>
+		</select><br> 
+		<label for="precio">Precio:</label> 
+		<input type="text" id="precio" name="precio"><br> 
+		<label for="unidades">Unidades:</label>
+		<input type="text" id="unidades" name="unidades"><br>
+		<input type="submit" value="Dar de alta">
+	</form>
+	<br>
+	<a href="almacenService.html">Volver al gestor</a>
+</body>
+</html>

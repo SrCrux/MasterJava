@@ -35,10 +35,10 @@ public class Entrada extends HttpServlet {
 		for (int i = 0; i < t.getListaPaginas().size(); i++) {
 
 			out.println("<h2>" + t.getListaPaginas().get(i).getNombre() + "</h2>");
-			out.println("<table><tr><th>Temática</th><th>URL</th><th>Descripción</th></tr>" + "<tr><td>"
-					+ t.getListaPaginas().get(i).getTematica() + "</td><td><a href="
-					+ t.getListaPaginas().get(i).getUrl() + " target="+"_blank"+">" + t.getListaPaginas().get(i).getNombre()
-					+ "</a></td><td>" + t.getListaPaginas().get(i).getDescripcion() + "</td></tr></table>");
+			out.println("<table><tr><th>Nombre</th><th>Descripción</th></tr>" + "<tr><td>" + "</td><td><a href="
+					+ t.getListaPaginas().get(i).getUrl() + " target=" + "_blank" + ">"
+					+ t.getListaPaginas().get(i).getNombre() + "</a></td><td>"
+					+ t.getListaPaginas().get(i).getDescripcion() + "</td></tr></table>");
 
 		}
 

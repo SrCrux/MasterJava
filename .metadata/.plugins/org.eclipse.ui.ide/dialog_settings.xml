@@ -29,6 +29,11 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Admin\Documents\lunes14\Lunes1405-JSTLconMaven"/>
+			<item value="C:\Users\Admin\Documents\lunes14\Lunes1404-JSTLconlib"/>
+			<item value="C:\Users\Admin\Documents\lunes14\Lunes1403-EL"/>
+			<item value="C:\Users\Admin\Documents\lunes14\Lunes1402-includeJSP"/>
+			<item value="C:\Users\Admin\Documents\lunes14\Lunes1401-FrontController"/>
 			<item value="C:\Users\Admin\eclipse-workspace\10-ValidacionForward"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
