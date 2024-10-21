@@ -9,7 +9,8 @@ import com.masterjava.conexion.ConexionBD;
 import com.masterjava.modelo.Empleado;
 
 /**
- * Clase controladora que implementa los métodos necesarios para interactuar con una base de datos básica.
+ * Clase controladora que implementa los métodos necesarios para interactuar con
+ * una base de datos básica.
  * 
  * @author Pablo Guijarro Pérez 21/10/2024
  * @version 1.0
@@ -59,6 +60,92 @@ public class EmpresaControlador {
 				statement.setString(4, empleado.getFechaNacimiento());
 				statement.setDouble(5, empleado.getSueldo());
 				statement.setInt(6, id);
+				return statement.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * Método que modifica el nombre de un objeto de la base de datos.
+	 * 
+	 * @param id-    ID del objeto que se desea modificar.
+	 * @param nombre - El nuevo nombre del objeto.
+	 * @return retorna 1 si la modificación es correcta. Retorna 0 si devuelve nada.
+	 */
+	public int modificarNombreEmpleado(int id, String nombre) {
+		String query = "UPDATE empleados SET nombre=? WHERE id=?";
+		if (con != null) {
+			try (PreparedStatement statement = con.prepareStatement(query)) {
+				statement.setString(1, nombre);
+				statement.setInt(2, id);
+				return statement.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * Método que modifica los apellidos de un objeto de la base de datos.
+	 * 
+	 * @param id        - ID del objeto que se desea modificar.
+	 * @param apellido1 - El nuevo primer apellido del objeto.
+	 * @param apellido2 - El nuevo segundo apellido del objeto.
+	 * @return retorna 1 si la modificación es correcta. Retorna 0 si devuelve nada.
+	 */
+	public int modificarApellidosEmpleado(int id, String apellido1, String apellido2) {
+		String query = "UPDATE empleados SET primerapellido=?, segundoapellido=? WHERE id=?";
+		if (con != null) {
+			try (PreparedStatement statement = con.prepareStatement(query)) {
+				statement.setString(1, apellido1);
+				statement.setString(2, apellido2);
+				statement.setInt(3, id);
+				return statement.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * Método que modifica la fecha de nacimiento de un objeto de la base de datos.
+	 * 
+	 * @param id    - ID del objeto que se desea modificar.
+	 * @param fecha - La nueva fecha de nacimiento del objeto.
+	 * @return retorna 1 si la modificación es correcta. Retorna 0 si devuelve nada.
+	 */
+	public int modificarFechaNacimientoEmpleado(int id, String fecha) {
+		String query = "UPDATE empleados SET fechanacimiento=? WHERE id=?";
+		if (con != null) {
+			try (PreparedStatement statement = con.prepareStatement(query)) {
+				statement.setString(1, fecha);
+				statement.setInt(2, id);
+				return statement.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * Método que modifica el salario de un objeto de la base de datos.
+	 * 
+	 * @param id      - ID del objeto que se desea modificar.
+	 * @param salario - El nuevo salario del objeto.
+	 * @return retorna 1 si la modificación es correcta. Retorna 0 si devuelve nada.
+	 */
+	public int modificarSalarioEmpleado(int id, double salario) {
+		String query = "UPDATE empleados SET salario=? WHERE id=?";
+		if (con != null) {
+			try (PreparedStatement statement = con.prepareStatement(query)) {
+				statement.setDouble(1, salario);
+				statement.setInt(2, id);
 				return statement.executeUpdate();
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -144,6 +231,50 @@ public class EmpresaControlador {
 				return statement.executeUpdate();
 			} catch (SQLException e) {
 
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * Método que aumenta el salario porcentualmente de un objeto de la base de
+	 * datos.
+	 * 
+	 * @param id         - ID del objeto que se desea modificar.
+	 * @param porcentaje - El porcentaje de aumento de sueldo.
+	 * @return retorna 1 si la modificación es correcta. Retorna 0 si devuelve nada.
+	 */
+	public int aumentoPorcentualSalario(int id, double porcentaje) {
+		String query = "UPDATE empleados SET salario=(salario+(?/100)*salario) WHERE id=?";
+		if (con != null) {
+			try (PreparedStatement statement = con.prepareStatement(query)) {
+				statement.setDouble(1, porcentaje);
+				statement.setInt(2, id);
+				return statement.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * Método que disminuye el salario porcentualmente de un objeto de la base de
+	 * datos.
+	 * 
+	 * @param id         - ID del objeto que se desea modificar.
+	 * @param porcentaje - El porcentaje de disminución de sueldo.
+	 * @return retorna 1 si la modificación es correcta. Retorna 0 si devuelve nada.
+	 */
+	public int disminucionPorcentualSalario(int id, double porcentaje) {
+		String query = "UPDATE empleados SET salario=(salario-(?/100)*salario) WHERE id=?";
+		if (con != null) {
+			try (PreparedStatement statement = con.prepareStatement(query)) {
+				statement.setDouble(1, porcentaje);
+				statement.setInt(2, id);
+				return statement.executeUpdate();
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}

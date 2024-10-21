@@ -16,7 +16,11 @@ public class Test {
 		e1.setSueldo(250000);
 		controlador.modificarEmpleado(1, e1);
 		controlador.verEmpleados();
+		controlador.aumentoPorcentualSalario(1, 25);
+		controlador.disminucionPorcentualSalario(2, 10);
 		controlador.buscarEmpleado("Guijarro");
+		controlador.modificarFechaNacimientoEmpleado(2, "1936-02-25");
+		controlador.buscarEmpleado("Nieves");
 		controlador.salarioMedio();
 
 	}
