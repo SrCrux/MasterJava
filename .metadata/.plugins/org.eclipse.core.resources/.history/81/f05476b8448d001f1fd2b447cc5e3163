@@ -1,0 +1,11 @@
+package com.masterjava.modelo;
+
+public class Empleado {
+
+	private String nombre;
+	private String apellido1;
+	private String apellido2;
+	private String fechaNacimiento;
+	private double sueldo;
+
+}

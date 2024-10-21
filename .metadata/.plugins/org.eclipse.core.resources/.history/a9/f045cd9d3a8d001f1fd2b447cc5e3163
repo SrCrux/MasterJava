@@ -1,0 +1,14 @@
+package com.masterjava.test;
+
+import com.masterjava.conexion.ConexionBD;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ConexionBD conexion = new ConexionBD();
+		conexion.conexion();
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.masterjava.test;
+
+import com.masterjava.modelo.Empleado;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Empleado e1 = new Empleado("Pablo","Guijarro","Pérez","1997-04-03",120000);
+
+	}
+
+}

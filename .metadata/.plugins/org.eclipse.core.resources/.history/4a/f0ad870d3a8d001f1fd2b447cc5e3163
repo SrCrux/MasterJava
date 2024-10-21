@@ -1,0 +1,19 @@
+package com.masterjava.conexion;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ConexionBD {
+	
+	private static final String URL = "jdbc:mysql://localhost:3306/bdcurso";
+	private static final String USER = "root";
+	private static final String PASSWORD = "root";
+	
+	public Connection conexion() {
+		
+		Connection conexion = null;
+		DriverManager.getConnection(URL,USER,PASSWORD);
+		
+	}
+
+}

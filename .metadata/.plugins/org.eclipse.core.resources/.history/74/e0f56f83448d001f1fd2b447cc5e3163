@@ -1,0 +1,33 @@
+package com.masterjava.controller;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.masterjava.conexion.ConexionBD;
+
+public class EmpresaControlador {
+
+	ConexionBD conexion = new ConexionBD();
+	Connection con = conexion.conexion();
+
+	/**
+	 * Método que crea un nuevo objeto en la tabla de la base de datos.
+	 * 
+	 * @param query sentencia SQL para insertar un nuevo empleado en la tabla.
+	 * @return retorna 1 si la inserción es correcta. Retorna 0 si retorna nada.
+	 */
+	public int altaEmpleado() {
+		String query = "INSERT INTO empleados (nombre, primerapellido, segundoapellido, fechanacimiento, salario) VALUES (?,?,?,?,?)";
+		if (con != null) {
+			try (Statement statement = con.createStatement()) {
+				return statement.executeUpdate(query);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+
+	}
+
+}

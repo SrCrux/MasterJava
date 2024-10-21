@@ -1,0 +1,20 @@
+package com.masterjava.conexion;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class Insert {
+
+	public static void main(String[] args) {
+	
+		ConexionBD conexion = new ConexionBD();
+		Connection con = conexion.conexion();
+		String query = "INSERT INTO personas (nombre,apellido,edad) VALUES ('Rosa','Ndome',50)";
+		
+		if(con!=null) {
+			Statement statement = con.createStatement();
+		}
+
+	}
+
+}
