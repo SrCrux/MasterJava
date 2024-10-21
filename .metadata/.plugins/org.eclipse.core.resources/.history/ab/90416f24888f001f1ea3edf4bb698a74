@@ -119,6 +119,7 @@ public class EmpresaControlador {
 		String query = "SELECT AVG(salario) FROM empleados";
 
 		try (PreparedStatement statement = con.prepareStatement(query)) {
+			System.out.println("Conexión con la BD establecida");
 			ResultSet rs = statement.executeQuery();
 			while (rs.next()) {
 				System.out.println("Salario medio: " + rs.getDouble(1));
