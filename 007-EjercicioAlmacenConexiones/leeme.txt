@@ -1,0 +1,4 @@
+Incorporar el conextor j a la carpeta lib
+Crear el context.xml en META-INF
+En el web.xml incorporar el resource
+DataSource es el nombre que he elegido en context.xml
