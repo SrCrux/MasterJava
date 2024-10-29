@@ -1,0 +1,25 @@
+1. Se pretende desarrollar un programa para la gestión de empleados en empresas
+de software.
+La empresa puede disponer de los siguientes empleados:
+• Un directivo.
+• Hasta 3 desarrolladores, aunque el mínimo es 1.
+• Hasta 2 testers, aunque pueden no disponer de ninguno.
+Para cualquiera de los empleados es necesario conocer su nombre, DNI, edad
+y sueldo. Además, todos esos campos son obligatorios.
+Cada empleado en particular dispone de una serie de características que son
+importantes:
+• El directivo o jefe tiene un porcentaje de sueldo que se suma a su sueldo
+base en forma de bonus.
+• De los desarrolladores se necesita conocer si disponen o no de
+conocimientos en Java, JavaScript y .Net.
+• En el caso de los testers, es importante saber el número de proyectos que
+tiene pendientes de testear.
+Se pide:
+• Crear el árbol de herencia adecuado para la gestión de los empleados.
+• Crear el resto de clases.
+• Crear los métodos get y set.
+• Crear el método toString adecuado en cada caso.
+• El método toString de Empresa deberá mostrar solo los empleados que tiene
+contratados.
+• Crear un método en la clase Empresa que permita mostrar los sueldos de
+cada empleado.

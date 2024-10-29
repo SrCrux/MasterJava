@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ingresar Registro</title>
+</head>
+<body>
+<h2>Formulario de registro</h2>
+
+// EL FORMULARIO ESTÁ MAL, LO CAMBIÉ POR ACCIDENTE,D EBERIA SER NOMBRE, APELLIDOS Y EDAD.
+
+<form action="InsertarServlet" method="post">
+<label for="nombre">Nombre:</label> 
+		<input type="text" id="nombre" name="nombre"><br> 
+		<label for="categoria">Categoria:</label>
+		<select id="categoria" name="categoria">
+			<option value="electronica">Electronica</option>
+			<option value="papeleria">Papeleria</option>
+			<option value="alimentacion">Alimentacion</option>
+		</select><br> 
+		<label for="precio">Precio:</label> 
+		<input type="text" id="precio" name="precio"><br> 
+		<label for="unidades">Unidades:</label>
+		<input type="text" id="unidades" name="unidades"><br>
+		<input type="submit" value="Alta producto">
+</form>
+</body>
+</html>

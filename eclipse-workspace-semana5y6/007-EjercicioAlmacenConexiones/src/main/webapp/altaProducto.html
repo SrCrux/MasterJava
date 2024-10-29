@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alta producto</title>
+</head>
+<body>
+<h2>Alta producto</h2>
+<form action="AltaProducto" method="post">
+<label for="nombre">Nombre:</label> 
+		<input type="text" id="nombre" name="nombre" required><br> 
+		<label for="categoria">Categoría:</label>
+		<select id="categoria" name="categoria" required>
+			<option value="electronica">Electrónica</option>
+			<option value="papeleria">Papelería</option>
+			<option value="alimentacion">Alimentación</option>
+		</select><br> 
+		<label for="precio">Precio:</label> 
+		<input type="text" id="precio" name="precio" required><br> 
+		<label for="unidades">Unidades:</label>
+		<input type="text" id="unidades" name="unidades" required><br>
+		<input type="submit" value="Alta producto">
+		<a href="index.html">Volver al gestor</a>
+</form>
+</body>
+</html>

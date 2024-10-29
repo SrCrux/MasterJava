@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Almacén</title>
+</head>
+<body>
+<h1>Bienvenido al gestor de Grandes almacenes Guijarro</h1>
+<h2>Panel de control</h2>
+	<form action="ProductoControlador" method="post">
+		<label for="opcion">Elige una opción:</label>
+		<select name="opcion" id="opcion">
+			<option value="alta">Alta producto</option>
+			<option value="baja">Baja producto</option>
+			<option value="modificar">Modificar producto</option>
+			<option value="buscar">Buscar producto</option>
+			<option value="pedido">Realizar pedido</option>
+			<option value="enviar">Enviar pedido</option>
+			<option value="listar">Ver inventario</option>
+		</select> <input type="submit" value="Seleccionar">
+	</form>
+</body>
+</html>

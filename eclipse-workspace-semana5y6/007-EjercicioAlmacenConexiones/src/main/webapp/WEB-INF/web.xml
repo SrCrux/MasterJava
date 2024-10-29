@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="5.0">
+  <display-name>007-EjercicioAlmacenConexiones</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <description>Base de datos MySQL</description>
+    <res-ref-name>jdbc/MiDataSource</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <description></description>
+    <display-name>ProductoControlador</display-name>
+    <servlet-name>ProductoControlador</servlet-name>
+    <servlet-class>com.masterjava.crud.ProductoControlador</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductoControlador</servlet-name>
+    <url-pattern>/ProductoControlador</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AltaProducto</display-name>
+    <servlet-name>AltaProducto</servlet-name>
+    <servlet-class>com.masterjava.crud.AltaProducto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AltaProducto</servlet-name>
+    <url-pattern>/AltaProducto</url-pattern>
+  </servlet-mapping>
+</web-app>

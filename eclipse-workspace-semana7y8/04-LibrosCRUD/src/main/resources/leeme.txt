@@ -1,0 +1,16 @@
+RECURSO: Libro
+
+Vamos a exponer un CRUD de Libro
+
+GET 	--> Recuperar todos los libros / Recuperar 1 libro 	(http://localhost:8080/libros) / (http://localhost:8080/libros/{isbn})
+POST 	--> Insertar un libro 								(http://localhost:8080/libros)
+PUT 	--> Modificar un libro								(http://localhost:8080/libros)
+DELETE 	--> Eliminar un libro								(http://localhost:8080/libros/{isbn})
+
+1- Crear Proyecto (insertar starter Spring Web)
+2- Trabajar con el modelo de datos
+3- Lógica de la capa de negocio --> capa de servicio
+	3.1 - Crear una Interfaz
+	3.2 - Crear clase Impl		
+4- Implementar el controlador (@RestController, @AutoWired y hacer mapeos)
+5- Configuraciones en clase lanzadera 
