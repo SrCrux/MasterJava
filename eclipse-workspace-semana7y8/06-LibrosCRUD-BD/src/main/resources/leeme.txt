@@ -1,0 +1,21 @@
+RECURSO: Libro
+
+Vamos a exponer un CRUD de Libro
+
+GET 	--> Recuperar todos los libros / Recuperar 1 libro 	(http://localhost:8080/libros) / (http://localhost:8080/libros/{isbn})
+POST 	--> Insertar un libro 								(http://localhost:8080/libros)
+PUT 	--> Modificar un libro								(http://localhost:8080/libros)
+DELETE 	--> Eliminar un libro								(http://localhost:8080/libros/{isbn})
+
+1- Crear Proyecto y poner dependencias necesarias según tecnologías
+2- Definir el modelo de datos (com.masterjava.model) y usar las anotaciones @Entity, @Table, @Id , etc..
+3-Crear capa repository (com.masterjava.repository)
+	3.1 Crear una interfaz I"X"Repository que extends JpaRepository<T,ID>
+			donde T es el tipo de entidad e ID es el tipo de la clave primaria.
+4- Lógica de la capa de negocio --> capa de servicio
+	4.1 - Crear una Interfaz
+	4.2 - Crear clase Impl	(@Service) y declarar variable de tipo I"x"Repository (@Autowired)	
+5- Implementar el controlador (@RestController, @AutoWired y hacer mapeos)
+6- Configuraciones
+	6.1 En el application.properties incorporar la base de datos.
+	6.2 Configuraciones en clase lanzadera

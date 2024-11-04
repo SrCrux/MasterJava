@@ -3,26 +3,22 @@ package com.masterjava.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.masterjava.model.Curso;
+import com.masterjava.repository.ICursoRepository;
 
 @Service
 /**
  * Clase Impl que implementa los métodos de la interfaz ICurso.
  * 
  * @author Pablo Guijarro Pérez
- * @version 1.0 29/10/2024
+ * @version 1.0 31/10/2024
  */
 public class CursoImpl implements ICurso {
-
-	private List<Curso> listaCursos;
-
-	public CursoImpl() {
-		listaCursos = new ArrayList<Curso>(List.of(new Curso(1, "Jardineria", 120, 150),
-				new Curso(2, "Bricolaje", 60, 0), new Curso(3, "Programación Java", 170, 699.99),
-				new Curso(4, "Diseño gráfico", 60, 300), new Curso(5, "Yoga", 25, 59.99)));
-	}
+	@Autowired
+	private ICursoRepository repository;
 
 	@Override
 	/**
@@ -31,7 +27,7 @@ public class CursoImpl implements ICurso {
 	 * @return lista de todos los cursos.
 	 */
 	public List<Curso> listarCursos() {
-		return listaCursos;
+		return repository.findAll();
 	}
 
 	@Override
@@ -42,10 +38,10 @@ public class CursoImpl implements ICurso {
 	 * @return lista de todos los cursos incluido el nuevo.
 	 */
 	public List<Curso> altaCurso(Curso curso) {
-		if (!listaCursos.contains(curso)) {
-			listaCursos.add(curso);
+		if (!repository.equals(curso)) {
+			repository.save(curso);
 		}
-		return listaCursos;
+		return repository.findAll();
 	}
 
 	@Override
@@ -56,12 +52,8 @@ public class CursoImpl implements ICurso {
 	 * @return lista de todos los cursos sin el curso eliminado.
 	 */
 	public List<Curso> bajaCurso(int codCurso) {
-		for (int i = 0; i < listaCursos.size(); i++) {
-			if (listaCursos.get(i).getCodCurso() == codCurso) {
-				listaCursos.remove(i);
-			}
-		}
-		return listaCursos;
+		repository.deleteById(codCurso);
+		return repository.findAll();
 	}
 
 	@Override
@@ -72,13 +64,11 @@ public class CursoImpl implements ICurso {
 	 * @param duracion la nueva duración del curso
 	 */
 	public void actualizarDuracion(int codCurso, int duracion) {
-		for (int i = 0; i < listaCursos.size(); i++) {
-			if (listaCursos.get(i).getCodCurso() == codCurso) {
-				if (duracion > 0) {
-					listaCursos.get(i).setDuracion(duracion);
-				}
-			}
+		Curso curso = repository.findById(codCurso).orElse(null);
+		if (duracion > 0) {
+			curso.setDuracion(duracion);
 		}
+		repository.save(curso);
 	}
 
 	@Override
@@ -89,13 +79,7 @@ public class CursoImpl implements ICurso {
 	 * @return los datos del curso buscado.
 	 */
 	public Curso buscarCurso(int codCurso) {
-		for (int i = 0; i < listaCursos.size(); i++) {
-			if (listaCursos.get(i).getCodCurso() == codCurso) {
-				return listaCursos.get(i);
-
-			}
-		}
-		return null;
+		return repository.findById(codCurso).orElse(null);
 	}
 
 	@Override
@@ -107,13 +91,7 @@ public class CursoImpl implements ICurso {
 	 * @return lista de cursos entre el rango de precios especificados.
 	 */
 	public List<Curso> listarCursosPorRangoPrecio(int precioMin, int precioMax) {
-		List<Curso> listaCursosPrecio = new ArrayList<Curso>();
-		for (int i = 0; i < listaCursos.size(); i++) {
-			if (listaCursos.get(i).getPrecio() >= precioMin && listaCursos.get(i).getPrecio() <= precioMax) {
-				listaCursosPrecio.add(listaCursos.get(i));
-			}
-		}
-		return listaCursosPrecio;
+		return repository.listarCursosPorRangoPrecio(precioMin, precioMax);
 	}
 
 }
