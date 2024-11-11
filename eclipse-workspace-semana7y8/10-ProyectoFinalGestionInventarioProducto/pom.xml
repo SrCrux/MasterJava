@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.masterjava</groupId>
-	<artifactId>07-EjercicioCurso-BD</artifactId>
+	<artifactId>10-ProyectoFinalGestionInventarioProducto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>07-EjercicioCurso-BD</name>
+	<name>10-ProyectoFinalGestionInventarioProducto</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
