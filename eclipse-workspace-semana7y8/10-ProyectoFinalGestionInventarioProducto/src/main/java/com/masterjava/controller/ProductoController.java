@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 /**
  * 
  * @author Pablo Guijarro Pérez
- *@version 1.0 08/11/2024
+ * @version 1.0 08/11/2024
  */
 public class ProductoController {
 	@Autowired
@@ -42,9 +43,9 @@ public class ProductoController {
 			@ApiResponse(responseCode = "201", description = "Ingreso de producto con exito"),
 			@ApiResponse(responseCode = "400", description = "Solicitud inválida"),
 			@ApiResponse(responseCode = "409", description = "Conflicto: el producto ya existe") })
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void altaProducto(@RequestBody Producto producto) {
-		service.altaProducto(producto);
+	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Producto> altaProducto(@RequestBody Producto producto) {
+		return service.altaProducto(producto);
 	}
 
 	@Operation(summary = "Modificar productos", description = "Modificar productos por parametros en el body", responses = {

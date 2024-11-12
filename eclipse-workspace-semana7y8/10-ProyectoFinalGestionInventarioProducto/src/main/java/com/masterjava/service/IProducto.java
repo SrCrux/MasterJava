@@ -2,12 +2,14 @@ package com.masterjava.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.masterjava.model.Producto;
 
 /**
  * 
  * @author Pablo Guijarro Pérez
- *@version 1.0 08/11/2024
+ * @version 1.0 08/11/2024
  */
 public interface IProducto {
 
@@ -15,7 +17,7 @@ public interface IProducto {
 
 	double precio(int idProducto);
 
-	void altaProducto(Producto producto);
+	ResponseEntity<Producto> altaProducto(Producto producto);
 
 	void modificarProducto(Producto producto);
 

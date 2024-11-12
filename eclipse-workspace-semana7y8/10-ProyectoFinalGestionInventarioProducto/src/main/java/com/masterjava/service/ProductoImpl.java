@@ -3,6 +3,8 @@ package com.masterjava.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.masterjava.model.Producto;
@@ -12,7 +14,7 @@ import com.masterjava.repository.ProductoRepository;
 /**
  * 
  * @author Pablo Guijarro Pérez
- *@version 1.0 08/11/2024
+ * @version 1.0 08/11/2024
  */
 public class ProductoImpl implements IProducto {
 
@@ -25,12 +27,14 @@ public class ProductoImpl implements IProducto {
 	}
 
 	@Override
-	public void altaProducto(Producto producto) {
-		if (!repository.equals(producto)) {
-
-			repository.save(producto);
+	public ResponseEntity<Producto> altaProducto(Producto producto) {
+		List<Producto> listaProductos = repository.findAll();
+		for (Producto p : listaProductos) {
+			if (p.getNombre().equals(producto.getNombre())) {
+				return ResponseEntity.status(HttpStatus.CONFLICT).build();
+			}
 		}
-
+		return new ResponseEntity<Producto>(repository.save(producto), HttpStatus.OK);
 	}
 
 	@Override
